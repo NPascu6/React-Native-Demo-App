@@ -1,14 +1,19 @@
 import React from 'react';
-import { Text, StyleSheet } from 'react-native';
+import { Text, StyleSheet, Image, View } from 'react-native';
 
-const ImageDetail = () =>{
+const ImageDetail = props => {
     return (
-        <Text>Show Image of Forest</Text>
+        <View>
+            <Text style={styles.textStyle}>{props.title}</Text>
+            <Image source={props.imageSource} />
+        </View>
     )
 }
 
-const style = StyleSheet.create({
-
+const styles = StyleSheet.create({
+    textStyle: {
+        fontSize: 20
+    }
 })
 
 export default ImageDetail;
